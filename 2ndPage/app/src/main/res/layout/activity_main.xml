@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:background="#7D4AD8"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avinash\nThakur"
+            android:textSize="60dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date : 28th July 2023"
+            android:textSize="12dp"
+            android:textColor="#C6B6E1"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Education:"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MAHARAJA SURAJMAL INSTITUTE OF TECHNOLOGY"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2021-2025"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="B.Tech in Computer Science and Engineering"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AHLCON PUBLIC SCHOOL"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2019-2021"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Non-Medical Science - PCM with Computer Science"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MAHARISHI VIDYA MANDIR"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2015-2019"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="High School"
+        android:textSize="15dp"
+        android:textColor="#7D4AD8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:text="Click to Add"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#7D4AD8"/>
+
+
+</LinearLayout>
