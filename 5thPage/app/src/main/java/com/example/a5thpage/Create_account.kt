@@ -17,6 +17,8 @@ class Create_account : AppCompatActivity() {
     lateinit var name: EditText
     lateinit var email: EditText
     lateinit var pass: EditText
+    lateinit var m_number: EditText
+    lateinit var gender: EditText
     lateinit var login: TextView
 
     lateinit var sharedPreferences: SharedPreferences
@@ -30,6 +32,8 @@ class Create_account : AppCompatActivity() {
         email = findViewById(R.id.email)
         name = findViewById(R.id.name)
         pass = findViewById(R.id.pass)
+        m_number = findViewById(R.id.m_number)
+        gender = findViewById(R.id.gender)
         login = findViewById(R.id.login)
 
         sharedPreferences = this.getSharedPreferences("login_data", MODE_PRIVATE)
@@ -39,25 +43,31 @@ class Create_account : AppCompatActivity() {
         create_acc.setOnClickListener(){
             //intent.putExtra("email", email.text.toString())
             //intent.putExtra("pass",pass.text.toString())
-            editor.putString("user_email",email.text.toString())
-            editor.putString("user_name",name.text.toString())
-            editor.putString("user_pass",pass.text.toString())
-            editor.apply()
-            editor.commit()
+            if(email.text.isNotEmpty() && name.text.isNotEmpty() && pass.text.isNotEmpty() && m_number.text.isNotEmpty() && gender.text.isNotEmpty()){
+                editor.putString("user_email",email.text.toString())
+                editor.putString("user_name",name.text.toString())
+                editor.putString("user_pass",pass.text.toString())
+                editor.apply()
+                editor.commit()
 
-            val Builder = AlertDialog.Builder(this)
+                val Builder = AlertDialog.Builder(this)
 
-            Builder.setTitle("Notification")
-            Builder.setMessage("Accound has been successfully created !")
+                Builder.setTitle("Notification")
+                Builder.setMessage("Accound has been successfully created !")
 
-            Builder.setPositiveButton("Ok"){ _ , _ ->
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+                Builder.setPositiveButton("Ok"){ _ , _ ->
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+
+                Builder.setCancelable(false)
+                Builder.show()
             }
 
-            Builder.setCancelable(false)
-            Builder.show()
+            else{
+                Toast.makeText(this, "All Fields are Mandatory", Toast.LENGTH_SHORT).show()
+            }
         }
 
         login.setOnClickListener() {
