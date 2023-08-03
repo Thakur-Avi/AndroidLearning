@@ -17,6 +17,7 @@ class Create_account : AppCompatActivity() {
     lateinit var name: EditText
     lateinit var email: EditText
     lateinit var pass: EditText
+    lateinit var login: TextView
 
     lateinit var sharedPreferences: SharedPreferences
     lateinit var editor : Editor
@@ -29,13 +30,15 @@ class Create_account : AppCompatActivity() {
         email = findViewById(R.id.email)
         name = findViewById(R.id.name)
         pass = findViewById(R.id.pass)
+        login = findViewById(R.id.login)
 
         sharedPreferences = this.getSharedPreferences("login_data", MODE_PRIVATE)
         editor = sharedPreferences.edit()
 
 
         create_acc.setOnClickListener(){
-
+            //intent.putExtra("email", email.text.toString())
+            //intent.putExtra("pass",pass.text.toString())
             editor.putString("user_email",email.text.toString())
             editor.putString("user_name",name.text.toString())
             editor.putString("user_pass",pass.text.toString())
@@ -55,6 +58,12 @@ class Create_account : AppCompatActivity() {
 
             Builder.setCancelable(false)
             Builder.show()
+        }
+
+        login.setOnClickListener() {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

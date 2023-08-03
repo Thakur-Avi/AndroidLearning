@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         sharedPreferences = this.getSharedPreferences("login_data", MODE_PRIVATE)
 
         val email = sharedPreferences.getString("user_email",null)
-        val pass = sharedPreferences.getString("suer_pass",null)
+        val pass = sharedPreferences.getString("user_pass",null)
 
         if(email == null  || pass == null){
             Toast.makeText(this, "Please create your account !", Toast.LENGTH_SHORT).show()
