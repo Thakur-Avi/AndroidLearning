@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/avatar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/content_box"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/bg_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        android:layout_height="450dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingTop="50dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/slider"
+                android:layout_width="60dp"
+                android:layout_height="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#CACACA" />
+
+            <ImageView
+                android:id="@+id/snap_qr"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/snap_qr"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toBottomOf="@id/slider"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avinash Thakur"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toRightOf="@id/snap_qr"
+                app:layout_constraintTop_toBottomOf="@id/slider"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a_t190503"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#73767B"
+                app:layout_constraintLeft_toRightOf="@id/snap_qr"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:id="@+id/snapscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_icon"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/snap_qr"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="25dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginTop="18dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/snapscore_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8,867"
+                    android:layout_marginEnd="4dp"
+                    android:textColor="#73767B"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_icon"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/snap_qr"
+                app:layout_constraintLeft_toRightOf="@id/snapscore"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginTop="18dp">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/zodiac"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taurus"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#9166CB"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/university"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:background="@drawable/bg_icon"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/snap_qr"
+                app:layout_constraintLeft_toRightOf="@id/star"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add University"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#73767B"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bff_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/star"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_box"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/bff"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/bff"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/bff_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#1  Best Friend"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/bff"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pin one friend as your #1 BFF"
+                    app:layout_constraintTop_toBottomOf="@id/bff_txt1"
+                    app:layout_constraintLeft_toRightOf="@id/bff"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#73767B"/>
+
+                <ImageView
+                    android:id="@+id/bff_goto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_chevron_right_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/noti_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bff_box"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_box1"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/noti"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_notifications_none_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/noti_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't miss any Snaps!"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/noti"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to enable notifications"
+                    app:layout_constraintTop_toBottomOf="@id/noti_txt1"
+                    app:layout_constraintLeft_toRightOf="@id/noti"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#73767B"/>
+
+                <ImageView
+                    android:id="@+id/noti_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_close_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/my_story_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Stories"
+                app:layout_constraintTop_toBottomOf="@id/noti_box"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_margin="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+New Story"
+                app:layout_constraintTop_toBottomOf="@id/noti_box"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_icon1"
+                android:padding="5dp"
+                android:textSize="15sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/story_box1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/my_story_txt"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_box1"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/story"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_camera_enhance_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/story_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to My Story"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/story"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/story_menu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_menu_open_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/story_box2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/story_box1"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_box1"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/story2"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_camera_enhance_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/story_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Avinash's Private Story"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/story2"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simran, Harshit, Aditya and 12more ..."
+                    app:layout_constraintTop_toBottomOf="@id/story_txt2"
+                    app:layout_constraintLeft_toRightOf="@id/story2"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#73767B"/>
+
+                <ImageView
+                    android:id="@+id/story_menu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_menu_open_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/my_story_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_marginLeft="16dp"
+                android:text="My Stories"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/story_box2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+New Story"
+                app:layout_constraintTop_toBottomOf="@id/story_box2"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_icon1"
+                android:padding="5dp"
+                android:textSize="15sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/story_box3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/my_story_txt1"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_box1"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/story3"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_camera_enhance_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/story_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to My Story"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/story3"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/story_menu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_menu_open_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/story_box4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/story_box3"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_box1"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/story4"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_camera_enhance_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/story_txt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Avinash's Private Story"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/story4"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simran, Harshit, Aditya and 12more ..."
+                    app:layout_constraintTop_toBottomOf="@id/story_txt4"
+                    app:layout_constraintLeft_toRightOf="@id/story4"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#73767B"/>
+
+                <ImageView
+                    android:id="@+id/story_menu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_menu_open_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_keyboard_arrow_left_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_share_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@id/settings"
+        android:layout_marginEnd="70dp"
+        android:layout_marginTop="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
